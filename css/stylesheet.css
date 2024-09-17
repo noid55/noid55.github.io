@@ -1,0 +1,110 @@
+body {
+    background-color: lightblue;
+    margin: 12px;
+}
+
+
+
+#nonCenter {
+    text-align: right;
+    color: green;
+}
+
+p.centerH1 {
+    text-align: right;
+    color: yellowgreen;
+}
+
+
+.secondPara {
+    color: black;
+    margin: 12px;
+    padding: 2em;
+    /* display:inline; */
+
+}
+
+.stockPhoto1{
+    border-radius: 12px;
+    
+    /* display: inline; */
+}
+
+h1 { 
+    /* background-color: rgb(53, 119, 173); */
+    /* opacity: 0.3; */
+    /* border-style: solid; */
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 12px;
+    margin-bottom: 50px;
+    padding: 25px;
+    text-align: center;
+    font-size: 50px;
+}
+
+h2 {
+    text-align: center;
+}
+
+nav{
+    background-color: rgb(68, 141, 201);
+    border-radius: 12px;
+    /* padding: 8px; */
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    order: 4;
+    flex-grow: 4;
+
+}
+.firstNav{
+    color: black;
+    padding: 8px;
+    text-decoration: none;
+    border-color: black;
+    border-width: 3px;
+    border-right-style: solid;
+    flex: inherit;
+}
+.secondNav{
+    color: black;
+    padding: 8px;
+    text-decoration: none;
+    border-color: black;
+    border-width: 3px;
+    border-right-style: solid;
+    flex: inherit;
+}
+.thirdNav{
+    color: black;
+    padding: 8px;
+    text-decoration: none;
+    border-color: black;
+    border-width: 3px;
+    border-right-style: solid;
+    flex: inherit;
+}
+.fourthNav{
+    color: black;
+    padding: 8px;
+    text-decoration: none;
+    border-color: black;
+    border-width: 3px;
+    flex: inherit;
+}
+
+.selected{
+    background-color: rgba(50, 110, 158);
+}
+
+div {
+    background-color: rgb(68, 141, 201);
+    border-radius: 12px;
+    margin: 12px;
+}
+
+.container{
+    display: flex;
+    margin: 11px; 
+}
