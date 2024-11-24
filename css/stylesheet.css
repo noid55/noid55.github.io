@@ -1,3 +1,5 @@
+/*---------------General styles---------*/
+
 :root {
     --main-colour: #ffd500;
     --background-colour: #ffffff;
@@ -7,20 +9,35 @@
 
 body {
     margin: 0;
-
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+    font-family: Moderat, Avenir, Helvetica, Arial, sans-serif;
+    color: var(--text-colour);
+}
+
+/*------------Header and body---------------------*/
 
 nav {
     color: #fff;
     float: right;
 }
 
+/* checkbox and various elemnts for hamburger menu follows here:
+Inspired by/from: https://mukundkumra.medium.com/create-a-responsive-hamburger-menu-with-html-and-css-a-step-by-step-tutorial-c63e44fcee2e 
+          We make a checkbox that is hidden to mimic the function of a proper hamburger menu without using js. The label for attribute makes it so whenever you click on it's contents
+           (meny text and icon) you interract with the checkbox */
 .checkbtn {
     font-size: 1.5rem;
     color: black;
     cursor: pointer;
 }
-
 
 #check {
     display: none;
@@ -64,7 +81,7 @@ nav {
     text-decoration: none;
 }
 
-header {
+.header {
     background-color: var(--main-colour);
     margin: 0;
     border: 0;
@@ -101,19 +118,7 @@ header {
     top: 2em;
 }
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-a {
-    font-family: Moderat, Avenir, Helvetica, Arial, sans-serif;
-    color: var(--text-colour);
-}
-
-#promo-video {
+.promo-video {
     margin-top: 5%;
     width: 100%;
     height: 400px;
@@ -121,28 +126,24 @@ a {
 
 }
 
-#sub-title {
+.sub-title {
     font-weight: 450;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
-#title {
+.title {
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 0;
     font-size: 3em;
 }
 
-/* Fixes text overflowing the page on mobile */
-@media (max-width: 768px) {
-    #title {
-        font-size: 1.5em;
-    }
-}
 
-#heading-section,
-#heading-info-section {
+
+
+.heading-section,
+.heading-info-section {
     margin: 0 12.5% 0 12.5%;
 }
 
@@ -169,17 +170,12 @@ a {
     margin: 1%;
 }
 
-#introduction-speech {
+.introduction-speech {
     margin: 5% 30% 5% 30%;
     font-size: 1.6em;
 }
 
-/* Fixes text margin on phone */
-@media (max-width: 768px) {
-    #introduction-speech {
-        margin: 10% 5% 5% 5%
-    }
-}
+
 
 .program-info-list {
     display: flex;
@@ -198,31 +194,24 @@ a {
 
 }
 
-/*PHONE SCREEN*/
-@media only screen and (max-width: 768px) {
-    #promo-video {
-        height: 300px;
-    }
-}
 
-/*LAPTOP*/
-@media only screen and (min-width: 769px) {
-    #promo-video {
-        height: 600px;
-    }
-}
 
-/*2 short information boxes*/
+/*-------------2 short information boxes-------------------------------*/
 
 
 .bold-text {
     text-decoration: none;
     font-weight: bold;
-}
-
-.bold-text:hover {
     border-bottom: 0.15em solid var(--main-colour);
 }
+
+/*colored underline, under bold text*/
+
+.bold-text:hover {
+    border-bottom: 0.15em solid black;
+}
+
+/*container for 2 boxes, spaced evenly*/
 
 .container-2-boxes {
     display: flex;
@@ -235,12 +224,16 @@ a {
     font-size: 1em;
 }
 
+/*wrapping boxes*/
+
 .box-wraper {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
+
+/*styling tittle-box for both boxes*/
 
 .box-1-and-2-tittle {
     background-color: var(--main-colour);
@@ -258,8 +251,9 @@ a {
 
 }
 
-.content-item1,
-.content-item2 {
+/*styling for content inside both boxes*/
+
+.content-item {
     background-color: var(--box-text-background);
     width: 30em;
     height: 28em;
@@ -272,31 +266,29 @@ a {
     border: 0.1em solid var(--main-colour);
 }
 
-.content-item1 p,
-.content-item2 p {
+.content-item p {
     line-height: 1.5em;
 }
 
-.content-item1 li,
-.content-item2 li {
+.content-item li {
     text-align: left;
     margin-bottom: 0.5em;
     font-size: 1.1em;
 }
 
-.content-item1 li .bold-text,
-.content-item2 li .bold-text {
+.content-item li .bold-text {
     font-size: 0.9em;
 }
 
-.content-item1 ul,
-.content-item2 ul {
+.content-item ul {
     margin-bottom: 1.5em;
 
 }
 
 
-/* 1 information long box */
+/*--------------------------- information long box -------------------*/
+
+/*long box container, with some spacing, centered*/
 
 .container-long-box {
     display: flex;
@@ -306,7 +298,9 @@ a {
     font-size: 1.1em;
 }
 
-.long-box {
+/*styling tittle-box for long boxes*/
+
+.long-box-tittle {
     background-color: var(--main-colour);
     width: 38em;
     height: 4em;
@@ -317,9 +311,13 @@ a {
     text-align: center;
 }
 
-.long-box p {
+/*remove margins inside tittle box*/
+
+.long-box-tittle p {
     margin: 0;
 }
+
+/*styling for content inside long boxes*/
 
 .section-content {
     background-color: var(--box-text-background);
@@ -340,7 +338,7 @@ a {
     line-height: 1.5em;
 }
 
-/*Styles for li in long boxes*/
+/*Styles for list items and unordered lists in long boxes*/
 
 .container-long-box li {
 
@@ -355,19 +353,27 @@ a {
     text-align: center;
 }
 
+/*adding some space above heading*/
+
 .section-content h4 {
     margin-top: 1em;
 }
 
 /* Layout for study years boxes */
 
+/*grid layout with 3 columns, each year has its own column*/
+
 .study-years {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /*3 columns*/
     grid-column-gap: 10px;
+    /*space between each column*/
     width: 100%;
     height: auto;
 }
+
+/*styles for study year boxes*/
 
 .box {
     display: flex;
@@ -379,8 +385,6 @@ a {
     border-radius: 0.5em;
     background-color: #e2e2e0;
 }
-
-
 
 .box h4 {
     text-align: center;
@@ -408,8 +412,11 @@ a {
     font-size: 1em;
 }
 
+/*styling for color stripes on the right side of color-code items */
+
 .color-stripe-side::before {
     content: '';
+    /*creating pseudo element*/
     position: absolute;
     top: 0;
     right: 0;
@@ -417,33 +424,41 @@ a {
     width: 0.7em;
 }
 
-/*What it does: looks inside #legend and finds all children with color-code class and adds styles */
+/*looks inside #legend and finds all children with color-code class and adds styles */
+
+/* Assign color for the first color-code item in the legend */
 #legend .color-code:nth-child(1) .color-stripe-side::before {
     background-color: rgb(0, 3, 182);
 }
 
+/* Assign color for the second color-code item in the legend */
 #legend .color-code:nth-child(2) .color-stripe-side::before {
     background-color: rgb(255, 0, 0);
 }
 
+/* Assign color for the third color-code item in the legend */
 #legend .color-code:nth-child(3) .color-stripe-side::before {
     background-color: rgb(0, 3, 182);
 }
 
+/* Assign color for the fourth color-code item in the legend */
 #legend .color-code:nth-child(4) .color-stripe-side::before {
     background-color: rgb(255, 0, 0);
 }
 
+/* Assign color for the fifth color-code item in the legend */
 #legend .color-code:nth-child(5) .color-stripe-side::before {
     background-color: rgb(236, 154, 0);
 }
 
+/*modyfing third and fourth color-code stripe to take only half of the height*/
 #legend .color-code:nth-child(3) .color-stripe-side::before,
 #legend .color-code:nth-child(4) .color-stripe-side::before {
     top: 0;
     height: 50%;
 }
 
+/*adding second stripe, that takes up lower half for the fourth and third color-code item*/
 #legend .color-code:nth-child(3) .color-stripe-side::after,
 #legend .color-code:nth-child(4) .color-stripe-side::after {
     content: '';
@@ -454,13 +469,14 @@ a {
     width: 0.7em;
 }
 
+/*assigning color for the lower part of stripes for 3rd and 4th child*/
 #legend .color-code:nth-child(3) .color-stripe-side::after,
 #legend .color-code:nth-child(4) .color-stripe-side::after {
     background-color: rgb(0, 136, 0);
 }
 
 
-/* styles subject boxes that has course name, course code and points, adds color-marking and makes it box looking */
+/* styles subject boxes that has course name, course code and points.*/
 
 .subjects-obligatory-1st-half,
 .subjects-obligatory-2nd-half,
@@ -472,6 +488,8 @@ a {
     width: 100%;
     position: relative;
 }
+
+/*before and after here does the same as for the #legend section, adds color stripes on right*/
 
 .subjects-obligatory-1st-half::before,
 .subjects-obligatory-2nd-half::before,
@@ -516,7 +534,7 @@ a {
     background-color: rgb(0, 136, 0);
 }
 
-
+/*bold text for subjects*/
 
 .bold-text-subjects {
     text-decoration: none;
@@ -526,16 +544,20 @@ a {
     text-underline-offset: 0.2em;
 }
 
+/*hover effect for first half subjects, adds colored line under text*/
+
 .subjects-obligatory-1st-half .bold-text-subjects:hover {
     border-bottom: 0.15em solid rgb(0, 3, 182);
     text-underline-offset: 0.2em;
 }
 
+/*hover effect for second half subjects, adds colored line under text*/
 .subjects-obligatory-2nd-half .bold-text-subjects:hover {
     border-bottom: 0.15em solid rgb(255, 0, 0);
     text-underline-offset: 0.2em;
 }
 
+/*hover effect for first and second half extra subjects, adds colored line under text*/
 .subjects-obligatory-1st-half-extra-sub .bold-text-subjects:hover,
 .subjects-obligatory-2nd-half-extra-sub .bold-text-subjects:hover {
     border-bottom: 0.15em solid rgb(0, 136, 0);
@@ -553,8 +575,7 @@ a {
     width: 100%;
 }
 
-/* Places course info and splits two other classes with space between */
-
+/* Styling course info and splits two other classes with space between */
 .subjects-obligatory-1st-half .bottom-course-info,
 .subjects-obligatory-2nd-half .bottom-course-info,
 .subjects-obligatory-1st-half-extra-sub .bottom-course-info,
@@ -566,8 +587,6 @@ a {
 }
 
 /* Places course code to left side */
-
-
 .subjects-obligatory-1st-half .bottom-course-info .course-code,
 .subjects-obligatory-2nd-half .bottom-course-info .course-code,
 .subjects-obligatory-1st-half-extra-sub .course-code,
@@ -576,7 +595,6 @@ a {
 }
 
 /* Places course points to right side */
-
 .subjects-obligatory-1st-half .bottom-course-info .points,
 .subjects-obligatory-2nd-half .bottom-course-info .points,
 .subjects-obligatory-1st-half-extra-sub .bottom-course-info .points,
@@ -585,13 +603,14 @@ a {
     margin-right: 0.7em;
 }
 
-
 /* standalone button for further education */
-
 .further-education {
     display: flex;
     justify-content: center;
+    /*centers button horizontally*/
 }
+
+/*styling for button*/
 
 #btn {
     background-color: #ffd500;
@@ -607,66 +626,402 @@ a {
 
 #btn:hover {
     background-color: #ecc501;
+    /*slightly changes color when hovering over*/
     transform: scale(1.01);
+    /*increase button size when hovering over*/
 }
 
-/* Tablet Screen (Laptop and Tablets) */
+
+
+
+
+/*-------- Footer ------------*/
+
+
+/* Footer container */
+footer {
+    background-color: var(--main-colour);
+    /* Sets background color to main color */
+    padding: 1.5em 10%;
+    /* Adds padding to match header's padding */
+    color: var(--text-colour);
+    /* Sets text color to match main text color */
+    text-align: center;
+    /* Centers text inside footer */
+    font-size: 1em;
+    /* Sets font size for readability */
+    margin-top: 3em;
+    /* Adds space above footer */
+}
+
+/* Footer text */
+footer p {
+    margin: 0.5em 0;
+    /* Small vertical spacing between paragraphs */
+    font-weight: 500;
+    /* Sets medium font weight for footer text */
+}
+
+/* Footer links */
+footer a {
+    color: var(--text-colour);
+    /* Ensures link text matches main text color */
+    text-decoration: none;
+    /* Removes underline for clean look */
+    font-weight: bold;
+    /* Makes links bold for emphasis */
+}
+
+/* Hover effect on footer links */
+footer a:hover {
+    text-decoration: underline;
+    /* Adds underline on hover for visibility */
+}
+
+/* Footer list styling */
+.footer-section ul {
+    list-style-type: none;
+    /* Removes bullet points from list */
+    padding: 0;
+    /* Removes default padding */
+    margin: 0;
+    /* Removes default margin */
+}
+
+/* Spacing for list items inside footer */
+.footer-section ul li {
+    margin-bottom: 0.5em;
+    /* Small spacing between list items */
+}
+
+/* Footer container for multiple sections */
+.footer-container {
+    display: flex;
+    /* Uses flexbox for layout */
+    justify-content: space-around;
+    /* Distributes sections evenly */
+    flex-wrap: wrap;
+    /* Allows wrapping for smaller screens */
+    padding: 1.25em;
+    /* Adds padding inside footer container */
+    background-color: #ffd500;
+    /* Sets background color to match main color */
+    color: black;
+    /* Sets text color to black */
+}
+
+/* Footer section header */
+.footer-section h3 {
+    color: black;
+    /* Sets header text color to black */
+    margin-bottom: 0.625em;
+    /* Adds spacing below the header */
+}
+
+/* Links inside footer section */
+.footer-section ul li a {
+    color: black;
+    /* Sets link color to black */
+    text-decoration: none;
+    /* Removes underline from links */
+}
+
+/* Hover effect for links inside footer section */
+.footer-section ul li a:hover {
+    color: #FF6347;
+    /* Changes link color to orange-red on hover */
+    text-decoration: underline;
+    /* Underlines link on hover */
+    font-weight: bold;
+    /* Makes link bold on hover */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition for hover effect */
+}
+
+/* Footer bottom section */
+.footer-bottom {
+    text-align: center;
+    /* Centers text in footer bottom */
+    padding: 0.625em;
+    /* Adds padding to footer bottom */
+    background-color: #ffd500;
+    /* Matches footer background color */
+    color: black;
+    /* Sets text color to black */
+}
+
+
+/* ================================
+   Mobile Adjustments
+   ================================ */
+
+
+
+/* Makes the text fit the pictures */
+.pPages {
+    width: 70%;
+}
+
+/* Flexbox for the contents on the other pages */
+.pagesFlex {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: 0;
+    gap: 1em;
+}
+
+.h1Pages {
+    text-align: center;
+}
+
+/* Makes it so the headings don't get jumbled togheter */
+.h2Pages,
+.h3Pages {
+    width: 100%;
+}
+
+/* Adjusting the size of the pictures on the non-index pages*/
+.picturesPages {
+    width: 70%;
+    height: 30%;
+}
+
+.picturesPagesSmaller {
+    width: 50%;
+    height: 30%;
+}
+
+
+
+/* Activity page specials */
+.article-heading-image {
+    width: 100%;
+}
+
+/* Contains the images inside the sub-width-controller on the activity page */
+.pictures-activity-page {
+    max-width: 100%;
+}
+
+.aAccessability {
+    all: revert;
+}
+
+
+
+.under-dropdown-section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.under-dropdown-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.faglig-leder ul {
+    display: flex;
+}
+
+.under-dropdown-section img {
+    max-height: 120px;
+    margin-right: 10px;
+}
+
+.under-dropdown-section h3 {
+    margin: auto;
+}
+
+.under-dropdown-section h2 {
+    margin-top: 40px;
+}
+
+.under-dropdown-section a {
+    font-weight: bolder;
+    text-decoration-color: var(--main-colour);
+}
+
+.under-dropdown-section a:hover {
+    text-decoration-color: var(--text-colour);
+}
+
+.faglig-leder,
+.lignende-fag {
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+    border-color: rgba(0, 0, 0, 0.154);
+}
+
+.lignende-fag li {
+    margin-bottom: 10px;
+}
+
+.studenthistorier {
+    background-color: var(--main-colour);
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.studenthistorier-section {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.studenthistorier p,
+.studenthistorier h3 {
+    width: 90%;
+    margin-left: 3%;
+    margin-right: 3%;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.studenthistorier a {
+    font-weight: bold;
+}
+
+.studenthistorier img {
+    width: 100%;
+}
+
+/*----------MEDIA QUERY BODY-----------*/
+
+/* WIDTH CONTROL */
+
+/* WIDE SCREEN */
+.width-controller {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.sub-width-controller {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* LAPTOP */
+@media
+/* (min-width: 769px) and */
+(max-width: 1599px) {
+    .width-controller {
+        width: 80%;
+    }
+
+    .sub-width-controller {
+        width: 90%;
+    }
+}
+
+/* PHONE */
+@media (max-width: 768px) {
+    .width-controller {
+        width: 90%;
+
+    }
+
+    .sub-width-controller {
+        width: 95%;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5em;
+    }
+}
+
+/* Fixes text margin on phone */
+@media (max-width: 768px) {
+    .introduction-speech {
+        margin: 10% 5% 5% 5%
+    }
+}
+
+/*VIDEO*/
+
+/*PHONE SCREEN*/
+@media only screen and (max-width: 768px) {
+    .promo-video {
+        height: 300px;
+    }
+}
+
+/*LAPTOP*/
+@media only screen and (min-width: 769px) {
+    .promo-video {
+        height: 600px;
+    }
+}
+
+
+/* Laptop and Tablet screen */
 @media (max-width: 1200px) {
 
-    /* long boxes */
+    /*-------------- long boxes ---------*/
 
+    /*make sure container is displayed in a row with gaps  */
     .container-long-box {
         flex-direction: row;
         display: flex;
         gap: 2em;
     }
 
+    /*adds spacing*/
     .section-content {
         padding: 0 1em;
         margin: 0 1em;
-        box-sizing: border-box;
-        /*??*/
     }
 
+    /* Two columns instead of 3 for laptop/tablet screens*/
     .study-years {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        /* Two columns for laptop/tablet screens */
         gap: 1.5em;
     }
 
+    /*spacing out boxes*/
     .box {
         margin: 0.5em 0;
-        /* Space out boxes */
     }
 
-    .long-box {
+    .long-box-tittle {
         width: 60%;
-        /* Adjust width for readability */
+        /* Adjusted width adds readability */
         height: auto;
-        /* Ensure dynamic height based on content */
+        /* dynamic height based on content of each box */
         margin-top: 1em;
-        /* Add spacing from top */
     }
 
     .bold-text-subjects {
         font-size: 0.8em;
+        /*reducing font size*/
         padding: 0.2em;
     }
 
     .bold-text-subjects:hover {
         text-underline-offset: 0.2em;
-        /* Keeps underline closer */
+        /* Keeps underline closer to the text*/
     }
 
-    /* short boxes */
+    /*-------------- short boxes -------------*/
 
+    /*stacks boxes vertically*/
     .container-2-boxes {
         flex-direction: column;
+        /*stacks boxes in a column*/
         align-items: center;
-        /* Center align the stacked boxes */
+        /*centeres boxes*/
         gap: 2em;
-        /* Add space between the boxes */
         margin-bottom: 2em;
     }
 
@@ -675,25 +1030,24 @@ a {
         /* Adjust width to fit parent container */
     }
 
-    .content-item1,
-    .content-item2 {
+    .content-item {
         width: 80%;
-        /* Reduce width to fit smaller screens */
+        /* Reduced width to fit tablet/laptop screen */
         margin: auto;
-        /* Center content */
     }
 
     .box-1-and-2-tittle {
         width: 60%;
+        /* Reduced tittle width to fit tablet/laptop screen */
         text-align: center;
+        /*makes sure its centered*/
     }
 
     .container-2-boxes p {
         font-size: 1.1em;
     }
 
-    .content-item1 li,
-    .content-item2 li {
+    .content-item {
         font-size: 1.1em;
     }
 
@@ -702,50 +1056,53 @@ a {
 /* Mobile Screen (Phones) */
 @media (max-width: 768px) {
 
-    /* long boxes */
+    /*--------------------- long boxes ---------------*/
 
     .container-long-box {
         flex-direction: row;
+        /*keeps items in row*/
         display: flex;
         margin: 0em;
-        /* Remove excess margins for smaller screens */
+        /* Remove margins for phone screen */
     }
 
+    /*adds spacing and changes font size*/
     .section-content {
         font-size: 1em;
         margin: 0 1em;
         padding: 0 1em;
-        box-sizing: border-box;
-        /* Ensure no overflow */
     }
 
-    /* Makes the listed item inheret the text size from section-content div*/
+    /*list item inherets text size from section-content div*/
     .section-content li {
         font-size: inherit;
     }
 
+    /**/
     .study-years {
         grid-template-columns: 1fr;
-        /* Single-column layout for small screens */
+        /* Single column layout for phone screen */
         margin: auto;
-        /* Center content */
     }
 
-    .long-box {
+    .long-box-tittle {
         width: 60%;
-        /* Keep a consistent width */
+        /* Keeps consistent width */
         height: auto;
         margin-top: 1em;
-        /* Add spacing from the top */
     }
 
+    /*Adjusts bold text*/
     .bold-text-subjects {
         font-size: 0.8em;
         padding: 0.2em;
-        /* Needed to adjust width on mobile to avoid overflow, set display to inline-block and then set width */
         display: inline-block;
+        /*set display to inline-block */
         width: 80%;
+        /* and then set width to adjust width on mobile to avoid overflow*/
     }
+
+    /*removes under line from text on phone screen, it happens because we reduce width to zero*/
 
     .subjects-obligatory-1st-half .bold-text-subjects:hover {
         border-bottom: 0em solid rgb(0, 3, 182);
@@ -763,249 +1120,76 @@ a {
 
     }
 
-    /* short boxes */
+    /*----------------- short boxes -----------*/
+
+    /*stacks boxes vertically*/
     .container-2-boxes {
         flex-direction: column;
         align-items: center;
         gap: 1.5em;
-        /* Slightly reduce space between boxes */
         margin-top: 1em;
     }
 
     .box-wraper {
         width: 100%;
+        /* Adjust width to fit parent container */
     }
 
-    .content-item1,
-    .content-item2 {
+    .content-item {
         width: 90%;
+        /* Reduced width to fit phone screen */
         height: auto;
-        /* Narrower width for mobile */
         padding: 1em;
-        /* Adjust padding for smaller screens */
+        /*adds better spacing*/
     }
 
-
+    /*adjusts tittle for better redeability*/
     .box-1-and-2-tittle {
         width: 70%;
         text-align: center;
     }
 
+    /*adjust font size to fit mobile screen*/
 
     .container-2-boxes p {
         font-size: 1em;
     }
 
-    .content-item1 li,
-    .content-item2 li {
+    .content-item li {
         font-size: 1.1em;
     }
 
 }
 
 
+/*------------------MEDIA QUERY FOOTER-------------*/
 
-/* footer */
-
-
-/**/
-
-footer {
-    background-color: var(--main-colour);
-    padding: 1.5em 10%;
-    /* Matches header padding for left/right */
-    color: var(--text-colour);
-    /* Matches main text color */
-    text-align: center;
-    font-size: 1em;
-    /* Set font-size in em */
-    margin-top: 3em;
-    /* Adds spacing above the footer */
-}
-
-footer p {
-    margin: 0.5em 0;
-    /* Small spacing between footer text */
-    font-weight: 500;
-}
-
-footer a {
-    color: var(--text-colour);
-    /* Matches text color */
-    text-decoration: none;
-    /* No underline for a clean look */
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-    /* Underline on hover for emphasis */
-}
-
-.footer-section ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.5em;
-    /* Converted margin to em */
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 1.25em;
-    /* Converted padding to em */
-    background-color: #ffd500;
-    color: black;
-}
-
-.footer-section h3 {
-    color: black;
-    margin-bottom: 0.625em;
-    /* Converted margin to em */
-}
-
-.footer-section ul li a {
-    color: black;
-    text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-    color: #FF6347;
-    /* Changed color on hover for visibility */
-    text-decoration: underline;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    /* Changed color on hover for visibility */
-}
-
-.footer-bottom {
-    text-align: center;
-    padding: 0.625em;
-    /* Converted padding to em */
-    background-color: #ffd500;
-    color: black;
-}
-
-/* Mobile Adjustments */
+/* Adjust footer layout for mobile */
 @media (max-width: 768px) {
     footer {
         padding: 1em 5%;
-        /* Smaller padding for mobile */
+        /* Reduces padding for mobile screens */
         font-size: 0.9em;
-        /* Smaller font size for mobile */
+        /* Decreases font size for better readability on small screens */
         margin-top: 2em;
-        /* Reduce top margin for mobile */
+        /* Reduces top margin on mobile */
     }
+
 
     .footer-container {
         padding: 1em;
-        /* Smaller padding for the container on mobile */
+        /* Adjusts padding for mobile screens */
     }
 
+    /* Adjust header spacing for mobile */
     .footer-section h3 {
         margin-bottom: 0.5em;
-        /* Adjust the spacing for mobile */
+        /* Reduces spacing below headers on mobile */
     }
 
+    /* Adjust footer bottom padding for mobile */
     .footer-bottom {
         padding: 0.5em;
-        /* Smaller padding for mobile footer bottom */
-    }
-}
-
-
-.testP {
-    width: 70%;
-}
-
-.githubCommit {
-    display: flex;
-    /* justify-content: center; */
-    align-items: flex-start;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    margin: 0;
-    gap: 5em;
-}
-
-.h1Github {
-    text-align: center;
-}
-
-.h2Github {
-    text-align: center;
-}
-
-
-.pGithub {
-    margin: 2em;
-    text-align: center;
-    
-}
-
-
-/* .githubFlex {
-    width: 600px;
-} */
-
-.picturesGithub {
-    width: 70%;
-    height: 30%;
-}
-
-
-/* Activity page specials */
-#article-heading-image {
-    width: 100%;
-}
-
-/* Controls the width of all reading content on the pages */
-/* PHONE */
-.width-controller {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-}
-
-/* LAPTOP */
-@media (min-width: 600px) and (max-width: 1599px) {
-    .width-controller {
-        width: 80%;
-    }
-}
-
-/* WIDE-SCREEN */
-@media (min-width: 1600px) {
-    .width-controller {
-        width: 1200px;
-    }
-}
-
-/* Controls the width of all reading content on the pages */
-/* PHONE */
-.sub-width-controller {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* I've split up LAPTOP and WIDE-SCREEN pointers even though they contain the same just for easier accessibility if there were a need to change them individually */
-/* LAPTOP */
-@media (min-width: 600px) and (max-width: 1599px) {
-    .sub-width-controller {
-        width: 90%;
-    }
-}
-
-/* WIDE-SCREEN */
-@media (min-width: 1600px) {
-    .sub-width-controller {
-        width: 90%;
+        /* Reduces padding in footer bottom for mobile */
     }
 }
